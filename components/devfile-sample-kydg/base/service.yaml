@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: devfile-sample-kydg
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: devfile-sample-kydg
+    app.kubernetes.io/part-of: ci1t-43256-0094-app
+  name: devfile-sample-kydg
+spec:
+  ports:
+  - name: "3001"
+    port: 3001
+    targetPort: 3001
+  selector:
+    app.kubernetes.io/instance: devfile-sample-kydg
+status:
+  loadBalancer: {}
